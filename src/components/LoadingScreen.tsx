@@ -32,7 +32,7 @@ export const LoadingScreen = () => {
           />
         </div>
         <div className="space-y-2">
-          <h2 className="text-3xl font-bold text-primary">Tometo</h2>
+          <h2 className="text-3xl font-bold text-primary">Tomato</h2>
           <p className="text-lg text-muted-foreground">Loading{dots}</p>
         </div>
         <div className="flex justify-center gap-2">

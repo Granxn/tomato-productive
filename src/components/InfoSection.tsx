@@ -1,10 +1,10 @@
 export const InfoSection = () => {
   return (
     <div className="pixel-card space-y-3 sm:space-y-4">
-      <h2 className="text-xl sm:text-2xl font-bold text-primary text-center">What is Tometo? 🍅</h2>
+      <h2 className="text-xl sm:text-2xl font-bold text-primary text-center">What is Tomato? 🍅</h2>
       <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm leading-relaxed text-muted-foreground">
         <p>
-          <strong className="text-foreground">Tometo</strong> is designed to help you focus on any task you are working on, 
+          <strong className="text-foreground">Tomato</strong> is designed to help you focus on any task you are working on, 
           such as study, writing, or coding.
         </p>
         <p>

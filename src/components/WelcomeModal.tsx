@@ -34,7 +34,7 @@ export const WelcomeModal = ({ onNameSubmit }: WelcomeModalProps) => {
             />
           </div>
           <DialogTitle className="text-3xl text-center text-primary animate-fade-in">
-            Welcome to Tometo! 🍅
+            Welcome to Tomato! 🍅
           </DialogTitle>
           <DialogDescription className="text-center text-muted-foreground">
             Your friendly Pomodoro timer companion

@@ -23,9 +23,9 @@ const Index = () => {
       setIsLoading(false);
     }, 2000);
 
-    const savedName = localStorage.getItem("tometo-user-name");
-    const savedPoints = localStorage.getItem("tometo-points");
-    const savedSessions = localStorage.getItem("tometo-sessions");
+    const savedName = localStorage.getItem("tomato-user-name");
+    const savedPoints = localStorage.getItem("tomato-points");
+    const savedSessions = localStorage.getItem("tomato-sessions");
     
     if (savedName) {
       setUserName(savedName);
@@ -39,7 +39,7 @@ const Index = () => {
 
   const handleNameSubmit = (name: string) => {
     setUserName(name);
-    localStorage.setItem("tometo-user-name", name);
+    localStorage.setItem("tomato-user-name", name);
     setShowWelcome(false);
   };
 
@@ -50,8 +50,8 @@ const Index = () => {
     setPoints(newPoints);
     setCompletedSessions(newSessions);
     
-    localStorage.setItem("tometo-points", newPoints.toString());
-    localStorage.setItem("tometo-sessions", newSessions.toString());
+    localStorage.setItem("tomato-points", newPoints.toString());
+    localStorage.setItem("tomato-sessions", newSessions.toString());
     
     toast({
       title: "🎉 Session Complete!",
@@ -73,12 +73,12 @@ const Index = () => {
           <div className="flex items-center justify-center gap-2 sm:gap-4">
             <img
               src={tomatoGif}
-              alt="Tometo mascot"
+              alt="Tomato mascot"
               className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 hover-float"
               style={{ imageRendering: 'pixelated' }}
             />
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">
-              Tometo
+              Tomato
             </h1>
           </div>
           {userName && (
@@ -98,7 +98,7 @@ const Index = () => {
         </div>
 
         <footer className="text-center text-xs sm:text-sm text-muted-foreground py-4 sm:py-6 md:py-8">
-          <p>Made with ❤️ by Tometo • Your productivity friend</p>
+          <p>Made with ❤️ by Tomato • Your productivity friend</p>
         </footer>
       </div>
     </div>
