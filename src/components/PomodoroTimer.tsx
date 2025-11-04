@@ -62,48 +62,48 @@ export const PomodoroTimer = ({ onComplete }: PomodoroTimerProps) => {
   const progress = ((timerModes[mode] - timeLeft) / timerModes[mode]) * 100;
 
   return (
-    <div className="pixel-card space-y-6">
+    <div className="pixel-card space-y-4 sm:space-y-6">
       <div className="flex justify-center gap-2 flex-wrap">
         <Button
           onClick={() => handleModeChange("pomodoro")}
           variant={mode === "pomodoro" ? "default" : "outline"}
-          className="pixel-button text-xs"
+          className="pixel-button text-xs sm:text-sm"
         >
           Pomodoro
         </Button>
         <Button
           onClick={() => handleModeChange("shortBreak")}
           variant={mode === "shortBreak" ? "default" : "outline"}
-          className="pixel-button text-xs"
+          className="pixel-button text-xs sm:text-sm"
         >
           Short Break
         </Button>
         <Button
           onClick={() => handleModeChange("longBreak")}
           variant={mode === "longBreak" ? "default" : "outline"}
-          className="pixel-button text-xs"
+          className="pixel-button text-xs sm:text-sm"
         >
           Long Break
         </Button>
       </div>
 
-      <div className="text-center space-y-4">
-        <div className="text-7xl font-bold text-primary tabular-nums animate-fade-in">
+      <div className="text-center space-y-3 sm:space-y-4">
+        <div className="text-5xl sm:text-6xl md:text-7xl font-bold text-primary tabular-nums animate-fade-in">
           {formatTime(timeLeft)}
         </div>
         
-        <div className="w-full bg-muted rounded-full h-3 overflow-hidden pixel-border">
+        <div className="w-full bg-muted rounded-full h-2 sm:h-3 overflow-hidden pixel-border">
           <div
             className="h-full bg-primary transition-all duration-1000"
             style={{ width: `${progress}%` }}
           />
         </div>
 
-        <div className="flex gap-3 justify-center">
+        <div className="flex gap-2 sm:gap-3 justify-center">
           <Button
             onClick={toggleTimer}
             size="lg"
-            className="pixel-button"
+            className="pixel-button text-sm sm:text-base"
           >
             {isRunning ? "PAUSE" : "START"}
           </Button>
@@ -111,7 +111,7 @@ export const PomodoroTimer = ({ onComplete }: PomodoroTimerProps) => {
             onClick={resetTimer}
             variant="outline"
             size="lg"
-            className="pixel-button"
+            className="pixel-button text-sm sm:text-base"
           >
             RESET
           </Button>
@@ -119,7 +119,7 @@ export const PomodoroTimer = ({ onComplete }: PomodoroTimerProps) => {
       </div>
 
       {timeLeft === 0 && (
-        <div className="text-center text-xl text-primary font-bold animate-fade-in">
+        <div className="text-center text-lg sm:text-xl text-primary font-bold animate-fade-in">
           🎉 Time's up! Great work!
         </div>
       )}

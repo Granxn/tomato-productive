@@ -60,7 +60,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden p-8">
+    <div className="min-h-screen relative overflow-hidden p-4 sm:p-6 md:p-8">
       {isLoading && <LoadingScreen />}
       
       <Spotlight />
@@ -68,21 +68,21 @@ const Index = () => {
       
       {showWelcome && <WelcomeModal onNameSubmit={handleNameSubmit} />}
 
-      <div className="max-w-4xl mx-auto relative z-10 space-y-8">
-        <header className="text-center space-y-4 pt-8">
-          <div className="flex items-center justify-center gap-4">
+      <div className="max-w-4xl mx-auto relative z-10 space-y-4 sm:space-y-6 md:space-y-8">
+        <header className="text-center space-y-2 sm:space-y-4 pt-4 sm:pt-6 md:pt-8">
+          <div className="flex items-center justify-center gap-2 sm:gap-4">
             <img
               src={tomatoGif}
               alt="Tometo mascot"
-              className="w-16 h-16 hover-float"
+              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 hover-float"
               style={{ imageRendering: 'pixelated' }}
             />
-            <h1 className="text-4xl font-bold text-primary">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">
               Tometo
             </h1>
           </div>
           {userName && (
-            <p className="text-xl text-muted-foreground animate-fade-in">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground animate-fade-in">
               Hello, {userName}! 🌟
             </p>
           )}
@@ -92,12 +92,12 @@ const Index = () => {
 
         <PomodoroTimer onComplete={handleTimerComplete} />
 
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-4 sm:gap-6 md:gap-8 lg:grid-cols-2">
           <TodoList />
           <InfoSection />
         </div>
 
-        <footer className="text-center text-xs text-muted-foreground py-8">
+        <footer className="text-center text-xs sm:text-sm text-muted-foreground py-4 sm:py-6 md:py-8">
           <p>Made with ❤️ by Tometo • Your productivity friend</p>
         </footer>
       </div>
